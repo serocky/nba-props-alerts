@@ -1,0 +1,44 @@
+name: NBA official injury alerts (free)
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC: every 10 min from 16:00 to 07:50 (NBA afternoon + night), best effort.
+    # No guarantee of near real-time delivery: scheduled jobs can be delayed.
+    - cron: '3,13,23,33,43,53 0-7,16-23 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: official-nba-injury-monitor
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install free monitor dependencies
+        run: python -m pip install -q requests beautifulsoup4 pymupdf
+      - name: Check official injury report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python free_alert_worker.py --once
+      - name: Persist state for next scheduled run
+        shell: bash
+        run: |
+          if [ -f runtime/official_snapshot.json ]; then
+            git config user.name 'nba-injury-monitor[bot]'
+            git config user.email 'nba-injury-monitor[bot]@users.noreply.github.com'
+            git add -f runtime/official_snapshot.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'Update official NBA injury watch snapshot [skip ci]'
+              git push
+            fi
+          fi
