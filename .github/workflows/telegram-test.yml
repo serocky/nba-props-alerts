@@ -1,0 +1,52 @@
+name: NBA Telegram test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  telegram_test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Send test notification
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          token = os.environ.get('TELEGRAM_BOT_TOKEN', '').strip()
+          chat_id = os.environ.get('TELEGRAM_CHAT_ID', '').strip()
+          if not token or not chat_id:
+              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID secret.')
+
+          payload = json.dumps({
+              'chat_id': chat_id,
+              'text': '✅ NBA Props Lab — test połączenia z Telegramem zakończony powodzeniem.'
+          }).encode('utf-8')
+          request = urllib.request.Request(
+              'https://api.telegram.org/bot' + token + '/sendMessage',
+              data=payload,
+              headers={'Content-Type': 'application/json'},
+              method='POST',
+          )
+          try:
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  data = json.load(response)
+              if not data.get('ok'):
+                  raise SystemExit('Telegram did not confirm delivery.')
+          except urllib.error.HTTPError as exc:
+              raise SystemExit(
+                  f'Telegram HTTP {exc.code}. Check both secrets and press Start in your Telegram bot.'
+              ) from None
+          except urllib.error.URLError:
+              raise SystemExit('Cannot connect to Telegram API.') from None
+          print('Telegram test message sent successfully.')
+          PY
