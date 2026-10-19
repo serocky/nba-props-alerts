@@ -1,0 +1,8 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite3
+runtime/*
+!runtime/.gitkeep
+!runtime/official_snapshot.json

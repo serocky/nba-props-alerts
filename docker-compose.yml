@@ -1,0 +1,23 @@
+services:
+  dashboard:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NBA_ALERT_DB: /srv/app/runtime/alerts.sqlite3
+    volumes:
+      - ./runtime:/srv/app/runtime
+      - ./data:/srv/app/data:ro
+    ports:
+      - '127.0.0.1:8501:8501'
+    command: streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+  alerts:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NBA_ALERT_DB: /srv/app/runtime/alerts.sqlite3
+    volumes:
+      - ./runtime:/srv/app/runtime
+      - ./data:/srv/app/data:ro
+    command: python -u free_alert_worker.py --interval 300

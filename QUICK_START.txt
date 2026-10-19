@@ -1,0 +1,15 @@
+NBA Props Lab v3 FREE
+
+1. Rozpakuj ZIP.
+2. Uruchom Python w folderze projektu:
+   python -m pip install -r requirements.txt pytest
+3. Sprawdź testy:
+   python -m pytest -q
+4. Sprawdź próbę pobrania raportu NBA:
+   python free_alert_worker.py --once
+5. Uruchom panel w przeglądarce:
+   streamlit run app.py
+   Wybierz stronę „Darmowe alerty NBA”.
+6. Do alertów na telefon skonfiguruj token Telegrama i GitHub Actions według README.md.
+
+Zastrzeżenia: bez potwierdzonego źródła linii czterech bukmacherów nie ma automatycznych typów z kursami; tylko status OUT i opcjonalna ręczna watchlista. Pierwszy przebieg zbiera bazę i nie wysyła powiadomień. W październiku przed startem sezonu NBA dostępność raportów może być ograniczona. Produkt nie został wdrożony live.

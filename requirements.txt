@@ -1,0 +1,6 @@
+streamlit>=1.38,<2
+pandas>=2.0,<3
+numpy>=1.25,<3
+requests>=2.31,<3
+pymupdf>=1.24,<2
+beautifulsoup4>=4.12,<5

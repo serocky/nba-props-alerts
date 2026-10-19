@@ -1,0 +1,1 @@
+absent_player,team,affected_player,market,reason
