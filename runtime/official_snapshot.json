@@ -1,0 +1,176 @@
+{
+  "initialized": true,
+  "status_rows": {
+    "2026-10-20|bos@det|boston celtics|devin carter": {
+      "game_date": "2026-10-20",
+      "matchup": "BOS@DET",
+      "team": "Boston Celtics",
+      "player": "Devin Carter",
+      "status": "OUT",
+      "reason": "Injury/Illness - Illness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|bos@det|detroit pistons|elijah harkless": {
+      "game_date": "2026-10-20",
+      "matchup": "BOS@DET",
+      "team": "Detroit Pistons",
+      "player": "Elijah Harkless",
+      "status": "QUESTIONABLE",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|bos@det|detroit pistons|isaac jones": {
+      "game_date": "2026-10-20",
+      "matchup": "BOS@DET",
+      "team": "Detroit Pistons",
+      "player": "Isaac Jones",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|bos@det|detroit pistons|ugonna onyenso": {
+      "game_date": "2026-10-20",
+      "matchup": "BOS@DET",
+      "team": "Detroit Pistons",
+      "player": "Ugonna Onyenso",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|bos@det|detroit pistons|taurean prince": {
+      "game_date": "2026-10-20",
+      "matchup": "BOS@DET",
+      "team": "Detroit Pistons",
+      "player": "Taurean Prince",
+      "status": "QUESTIONABLE",
+      "reason": "Personal Reasons",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|dominick barlow": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Dominick Barlow",
+      "status": "OUT",
+      "reason": "",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|adem bona": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Adem Bona",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Foot Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|tacko fall": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Tacko Fall",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Quadriceps Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|ariel hukporti": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Ariel Hukporti",
+      "status": "OUT",
+      "reason": "",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|anfernee simons": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Anfernee Simons",
+      "status": "QUESTIONABLE",
+      "reason": "",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|phi@nyk|philadelphia 76ers|dean wade": {
+      "game_date": "2026-10-20",
+      "matchup": "PHI@NYK",
+      "team": "Philadelphia 76ers",
+      "player": "Dean Wade",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Ankle Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|okc@sas|oklahoma city thunder|otega oweh": {
+      "game_date": "2026-10-20",
+      "matchup": "OKC@SAS",
+      "team": "Oklahoma City Thunder",
+      "player": "Otega Oweh",
+      "status": "OUT",
+      "reason": "",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|okc@sas|oklahoma city thunder|thomas sorber": {
+      "game_date": "2026-10-20",
+      "matchup": "OKC@SAS",
+      "team": "Oklahoma City Thunder",
+      "player": "Thomas Sorber",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Knee Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|okc@sas|oklahoma city thunder|nikola topic": {
+      "game_date": "2026-10-20",
+      "matchup": "OKC@SAS",
+      "team": "Oklahoma City Thunder",
+      "player": "Nikola Topic",
+      "status": "OUT",
+      "reason": "Injury/Illness - Low Back Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|okc@sas|san antonio spurs|tobias harris": {
+      "game_date": "2026-10-20",
+      "matchup": "OKC@SAS",
+      "team": "San Antonio Spurs",
+      "player": "Tobias Harris",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Calf Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    },
+    "2026-10-20|okc@sas|injury report:|jayden quaintance": {
+      "game_date": "2026-10-20",
+      "matchup": "OKC@SAS",
+      "team": "Injury Report:",
+      "player": "Jayden Quaintance",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Knee Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf"
+    }
+  },
+  "by_person": {
+    "boston celtics|devin carter": "OUT",
+    "detroit pistons|elijah harkless": "QUESTIONABLE",
+    "detroit pistons|isaac jones": "OUT",
+    "detroit pistons|ugonna onyenso": "OUT",
+    "detroit pistons|taurean prince": "QUESTIONABLE",
+    "philadelphia 76ers|dominick barlow": "OUT",
+    "philadelphia 76ers|adem bona": "QUESTIONABLE",
+    "philadelphia 76ers|tacko fall": "OUT",
+    "philadelphia 76ers|ariel hukporti": "OUT",
+    "philadelphia 76ers|anfernee simons": "QUESTIONABLE",
+    "philadelphia 76ers|dean wade": "QUESTIONABLE",
+    "oklahoma city thunder|otega oweh": "OUT",
+    "oklahoma city thunder|thomas sorber": "OUT",
+    "oklahoma city thunder|nikola topic": "OUT",
+    "san antonio spurs|tobias harris": "OUT",
+    "injury report:|jayden quaintance": "OUT"
+  },
+  "events": [],
+  "pending": [],
+  "metadata": {
+    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-19_06_45PM.pdf",
+    "report_at": "2026-10-19T18:45:00-04:00",
+    "fetched_at": "2026-10-19T22:54:57.655821+00:00",
+    "count": 16,
+    "state": "ready"
+  }
+}
