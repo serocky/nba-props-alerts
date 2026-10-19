@@ -156,6 +156,13 @@ def tick(session=None, explicit_url: str | None = None, send_fn=send_telegram) -
     state = json.loads(STATE.read_text("utf-8")) if STATE.exists() else {}
     now = datetime.now(timezone.utc)
     current, meta = fetch_official_report(session=session, explicit_url=explicit_url, now=now)
+    if meta.get("state") == "awaiting_submissions":
+        # A pre-submission PDF is valid, but there are no player statuses to compare.
+        # Don't erase the last good snapshot or treat this as a parser failure.
+        print("NBA REPORT: NOT YET SUBMITTED — waiting for team injury statuses")
+        return {"fresh": 0, "pending": len(state.get("pending", [])), "attempted": 0,
+                "rows": 0, "report_at": meta.get("report_at"),
+                "source": meta.get("source_url"), "state": "awaiting_submissions"}
     state, fresh = process_report(state, current, meta)
     # On first run, never back-notify old OUT statuses.
     attempted = 0

@@ -152,6 +152,22 @@ def parse_injury_pdf(pdf_bytes: bytes, url: str = "") -> list[dict]:
     return list(output.values())
 
 
+
+def _only_unsubmitted_report(pdf_bytes: bytes) -> bool:
+    """Recognize the legitimate pre-report state, not a broken parser.
+
+    Reports before clubs submit their information contain matchups and
+    'NOT YET SUBMITTED' but *no* player statuses. Never mask a document
+    containing actual statuses that our parser failed to recognize.
+    """
+    with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
+        content = "\n".join(page.get_text("text") for page in doc)
+    pending = len(re.findall(r"\bNOT\s+YET\s+SUBMITTED\b", content, re.I))
+    matchups = len(MATCHUP.findall(content))
+    actual_statuses = re.search(r"\b(?:OUT|QUESTIONABLE|DOUBTFUL|PROBABLE|AVAILABLE)\b", content, re.I)
+    return pending > 0 and matchups > 0 and actual_statuses is None
+
+
 def fetch_official_report(session: requests.Session | None = None,
                           explicit_url: str | None = None,
                           now: datetime | None = None) -> tuple[list[dict], dict]:
@@ -165,7 +181,12 @@ def fetch_official_report(session: requests.Session | None = None,
     if not reply.content.startswith(b"%PDF"):
         raise RuntimeError("Zamiast PDF otrzymano inny format")
     statuses = parse_injury_pdf(reply.content, url=url)
+    meta = {"source_url": url, "report_at": report_at.isoformat() if report_at else "unknown",
+            "fetched_at": now.isoformat(), "count": len(statuses)}
     if not statuses:
+        if _only_unsubmitted_report(reply.content):
+            meta["state"] = "awaiting_submissions"
+            return [], meta  # Valid PDF, but clubs have yet to report. Do NOT alter saved snapshot.
         raise RuntimeError("Nie rozpoznano żadnych zawodników w PDF; parser wymaga weryfikacji")
-    return statuses, {"source_url": url, "report_at": report_at.isoformat() if report_at else "unknown",
-                      "fetched_at": now.isoformat(), "count": len(statuses)}
+    meta["state"] = "ready"
+    return statuses, meta
