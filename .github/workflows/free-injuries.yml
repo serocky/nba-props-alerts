@@ -2,9 +2,7 @@ name: NBA official injury alerts (free)
 on:
   workflow_dispatch:
   schedule:
-    # UTC: every 10 min from 16:00 to 07:50 (NBA afternoon + night), best effort.
-    # No guarantee of near real-time delivery: scheduled jobs can be delayed.
-- cron: '3,13,23,33,43,53 * * * *'
+    - cron: '3,13,23,33,43,53 * * * *'
   contents: write
 concurrency:
   group: official-nba-injury-monitor
