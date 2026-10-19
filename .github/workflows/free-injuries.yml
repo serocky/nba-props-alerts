@@ -4,8 +4,7 @@ on:
   schedule:
     # UTC: every 10 min from 16:00 to 07:50 (NBA afternoon + night), best effort.
     # No guarantee of near real-time delivery: scheduled jobs can be delayed.
-    - cron: '3,13,23,33,43,53 0-7,16-23 * * *'
-permissions:
+- cron: '3,13,23,33,43,53 * * * *'permissions:
   contents: write
 concurrency:
   group: official-nba-injury-monitor
