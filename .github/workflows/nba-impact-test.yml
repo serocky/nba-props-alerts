@@ -1,0 +1,105 @@
+name: NBA - test wplywu absencji (PTS AST REB)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-impact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Pobierz pliki projektu
+        uses: actions/checkout@v4
+
+      - name: Zainstaluj Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Zainstaluj biblioteki
+        run: python -m pip install -q pandas numpy
+
+      - name: Sprawdz baze i przetestuj analize z/bez kolegi
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          import os
+          import pandas as pd
+          from player_impact import historical_data, analyze_event
+
+          logs, schedule, source = historical_data(allow_demo=False)
+          if source != 'REAL' or logs is None or logs.empty:
+              raise SystemExit('BLAD: Brak prawdziwych danych w data/real_player_games.csv')
+          if schedule is None or schedule.empty:
+              raise SystemExit('BLAD: Brak terminarza w data/real_schedule.csv')
+          print('=== TEST BAZY NBA 2025/26 ===')
+          print('Wiersze:', len(logs))
+          print('Mecze:', logs['game_id'].nunique())
+          print('Zawodnicy:', logs['player'].nunique())
+          print('Druzyny:', logs['team'].nunique())
+          print('Daty:', str(logs['date'].min().date()), '-', str(logs['date'].max().date()))
+          print('Statusy:', dict(Counter(logs['status'])))
+          print('Uwaga: DNP = nie zagral; NIE oznacza potwierdzonej kontuzji.')
+
+          # Wybieramy historyczny przyklad z odpowiednia liczba meczow.
+          # To NIE jest prognoza zadnego dzisiejszego spotkania.
+          played = logs[logs['status'].eq('PLAYED') & logs['minutes'].ge(8)]
+          dnp = logs[logs['status'].eq('DNP')]
+          played_counts = played.groupby(['team', 'player']).size()
+          dnp_counts = dnp.groupby(['team', 'player']).size()
+          possible = []
+          for (team, player), without_n in dnp_counts.items():
+              with_n = int(played_counts.get((team, player), 0))
+              if with_n >= 5 and without_n >= 3:
+                  possible.append((int(without_n), with_n, team, player))
+          possible.sort(reverse=True)
+          print('Potencjalni koledzy z wystepami i DNP:', len(possible))
+          if not possible:
+              raise SystemExit('Brak par do analizy with/without. Sprawdz kompletnosc wierszy DNP.')
+
+          result = None
+          selected = None
+          sample_day = '2026-06-01'  # Po sezonie 2025/26; data wylacznie do testu historycznego.
+          for _, _, team, player in possible[:80]:
+              event = {'team': team, 'player': player, 'game_date': sample_day, 'matchup': ''}
+              trial = analyze_event(event, logs, schedule, top=5)
+              if trial.get('candidates'):
+                  result, selected = trial, event
+                  break
+          if result is None:
+              raise SystemExit('Brak dostatecznych prob u innych zawodnikow (co najmniej 5 z i 3 bez).')
+
+          print('\n=== HISTORYCZNY TEST: nie jest to rekomendacja zakladu ===')
+          print('Druzyna:', selected['team'], '| Kolega nie gra:', selected['player'])
+          report = [
+              '# Test analizy NBA - historia 2025/26',
+              '',
+              f'- Wiersze: {len(logs)}; mecze: {logs.game_id.nunique()}; zawodnicy: {logs.player.nunique()}',
+              f"- Przyklad: {selected['team']}, kolega: {selected['player']}",
+              '- DNP oznacza brak wystepu, nie potwierdzona kontuzje.',
+              '- Dane historyczne; nie jest to typ ani analiza aktualnych kursow.',
+              '',
+              '| Zawodnik | Statystyka | Z kolega | Bez kolegi | Roznica | Prognoza modelu | Próba z/bez |',
+              '|---|---|---:|---:|---:|---:|---:|',
+          ]
+          for row in result['candidates'][:3]:
+              print(f"\n{row['player']} | z/bez: {row['with_games']}/{row['without_games']} gier")
+              for metric in ('pts', 'ast', 'reb'):
+                  info = row.get(metric)
+                  if not info:
+                      continue
+                  print(f"  {metric.upper()}: {info['with']:.2f} -> {info['without']:.2f} | roznica {info['delta']:+.2f} | model {info['forecast']:.2f}")
+                  report.append(
+                      f"| {row['player']} | {metric.upper()} | {info['with']:.2f} | "
+                      f"{info['without']:.2f} | {info['delta']:+.2f} | "
+                      f"{info['forecast']:.2f} | {row['with_games']}/{row['without_games']} |"
+                  )
+          if os.getenv('GITHUB_STEP_SUMMARY'):
+              Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('\n'.join(report) + '\n', encoding='utf-8')
+          print('\nTEST ANALIZY: OK. To test historyczny, NIE rzeczywisty sygnal bukmacherski.')
+          PY
