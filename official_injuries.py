@@ -97,11 +97,30 @@ def surname_to_full(name: str) -> str:
     return name.strip()
 
 
-def parse_injury_pdf(pdf_bytes: bytes, url: str = "") -> list[dict]:
-    """Read fixed-column layout from official NBA reports using word geometry.
+# Allow only actual NBA team names as a PDF "Team" field.
+# A page header such as "Injury Report:" must NEVER overwrite the last team.
+NBA_TEAMS = {
+    "atlanta hawks": "ATL", "boston celtics": "BOS", "brooklyn nets": "BKN",
+    "charlotte hornets": "CHA", "chicago bulls": "CHI", "cleveland cavaliers": "CLE",
+    "dallas mavericks": "DAL", "denver nuggets": "DEN", "detroit pistons": "DET",
+    "golden state warriors": "GSW", "houston rockets": "HOU", "indiana pacers": "IND",
+    "la clippers": "LAC", "los angeles clippers": "LAC", "los angeles lakers": "LAL",
+    "memphis grizzlies": "MEM", "miami heat": "MIA", "milwaukee bucks": "MIL",
+    "minnesota timberwolves": "MIN", "new orleans pelicans": "NOP",
+    "new york knicks": "NYK", "oklahoma city thunder": "OKC", "orlando magic": "ORL",
+    "philadelphia 76ers": "PHI", "phoenix suns": "PHX",
+    "portland trail blazers": "POR", "sacramento kings": "SAC",
+    "san antonio spurs": "SAS", "toronto raptors": "TOR", "utah jazz": "UTA",
+    "washington wizards": "WAS",
+}
 
-    Date, game, and team are printed once per group, so carry values forward
-    across rows and pages. Only rows with an explicit recognized status count.
+
+def parse_injury_pdf(pdf_bytes: bytes, url: str = "") -> list[dict]:
+    """Parse the NBA injury PDF by column positions, guarding page breaks.
+
+    Context is carried between pages, but page headings/footers never update
+    the active team. Validate that team belongs to the active matchup.
+    Continuation text in the reason column is attached to the preceding row.
     """
     doc = fitz.open(stream=pdf_bytes, filetype="pdf")
     rows = []
@@ -109,16 +128,21 @@ def parse_injury_pdf(pdf_bytes: bytes, url: str = "") -> list[dict]:
     for page in doc:
         width = page.rect.width
         wordlist = page.get_text("words")
-        # Word grouping by top baseline, usually within 1-2 pts.
-        lines: list[dict] = []
+        lines = []
         for x0, y0, x1, y1, token, *_ in sorted(wordlist, key=lambda z: (z[1], z[0])):
             if not lines or abs(y0 - lines[-1]["y"]) > 2.4:
                 lines.append({"y": y0, "words": []})
-            lines[-1]["words"].append((x0, (y0 + y1) / 2, token))
+            lines[-1]["words"].append((x0, token))
+        active_reason_row = None
+        active_y = -100
         for line in lines:
             words = line["words"]
-            cell = lambda start, end: " ".join(v for x, _, v in sorted(words) if width * start <= x < width * end).strip()
-            # The fixed column starts are 2.5%, 14%, 23%, 31%, 50%, 69%, 79%.
+            cell = lambda start, end: " ".join(v for x, v in sorted(words) if width * start <= x < width * end).strip()
+            whole = " ".join(v for x, v in sorted(words))
+            # Page heading overlaps the team column on page 2, but must not
+            # change team context carried from the previous page.
+            if re.search(r"\bInjury\s+Report\s*:", whole, re.I) or re.search(r"\bPage\s+\d+\s+of\s+\d+", whole, re.I):
+                continue
             date_cell = cell(0.00, 0.14)
             match_cell = cell(0.23, 0.31)
             team_cell = cell(0.31, 0.50)
@@ -128,29 +152,55 @@ def parse_injury_pdf(pdf_bytes: bytes, url: str = "") -> list[dict]:
             found_date = DATE_RE.search(date_cell)
             if found_date:
                 try:
-                    game_day = datetime.strptime(found_date.group(0), "%m/%d/%Y").date().isoformat()
+                    new_day = datetime.strptime(found_date.group(0), "%m/%d/%Y").date().isoformat()
+                    if new_day != game_day:
+                        game_day = new_day
+                        matchup = team = ""
                 except ValueError:
                     pass
             found_match = MATCHUP.search(match_cell)
             if found_match:
-                matchup = found_match.group(0)
-            if team_cell and team_cell.lower() != "team" and not team_cell.lower().startswith("game"):
+                new_matchup = found_match.group(0)
+                if new_matchup != matchup:
+                    matchup = new_matchup
+                    team = ""
+                    active_reason_row = None
+            clean_team = " ".join(team_cell.split()).casefold()
+            if clean_team in NBA_TEAMS:
                 team = team_cell
-            # Some PDFs add spaces in Current Status; only recognized single statuses.
-            if status_cell not in STATUSES or not player_cell or player_cell.lower() == "player name":
+                active_reason_row = None
+            # Capture a new player's explicit status.
+            if status_cell in STATUSES and player_cell and player_cell.lower() != "player name":
+                if not (game_day and matchup and team):
+                    raise RuntimeError("PDF: gracz ze statusem nie ma kompletnego kontekstu meczu")
+                participants = set(matchup.split("@"))
+                if NBA_TEAMS.get(" ".join(team.split()).casefold()) not in participants:
+                    raise RuntimeError(f"PDF: drużyna {team!r} nie pasuje do meczu {matchup}")
+                row = {"game_date": game_day, "matchup": matchup, "team": team,
+                       "player": surname_to_full(player_cell), "status": status_cell,
+                       "reason": reason_cell, "source_url": url}
+                rows.append(row)
+                active_reason_row = row
+                active_y = line["y"]
                 continue
-            if not (game_day and matchup and team):
-                continue  # no valid game context — fail closed
-            rows.append({"game_date": game_day, "matchup": matchup, "team": team,
-                         "player": surname_to_full(player_cell), "status": status_cell,
-                         "reason": reason_cell, "source_url": url})
-    # Suppress corrupt and duplicate lines.
+            # A reason may wrap onto another text line. Only append text from
+            # the reason column, immediately under the current player row.
+            if (active_reason_row is not None and 0 < line["y"] - active_y <= 39
+                    and not found_date and not found_match and not team_cell
+                    and not player_cell and not status_cell
+                    and reason_cell and "NOT YET SUBMITTED" not in reason_cell.upper()
+                    and reason_cell.lower() != "reason"):
+                active_reason_row["reason"] = (active_reason_row["reason"] + " " + reason_cell).strip()
+                continue
+            # A non-row with a non-reason value ends the reason continuation.
+            if any([found_date, found_match, team_cell, player_cell, status_cell]):
+                active_reason_row = None
+        # Keep game/team context for players split across physical pages.
     output = {}
     for row in rows:
         key = (row["game_date"], row["matchup"], row["team"], row["player"])
         output[key] = row
     return list(output.values())
-
 
 
 def _only_unsubmitted_report(pdf_bytes: bytes) -> bool:

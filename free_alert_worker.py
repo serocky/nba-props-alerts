@@ -83,12 +83,23 @@ def process_report(state: dict, current: list[dict], meta: dict) -> tuple[dict, 
     prev_person = state.get("by_person") or {}
     baseline = bool(state.get("initialized", False))
     new_by_key = {status_key(row): row for row in current}
-    new_person = dict(prev_person)
+    # Discard malformed legacy team keys produced by old PDF page headers.
+    # Otherwise an old invalid identity would be kept forever.
+    new_person = {key: value for key, value in prev_person.items()
+                  if not key.startswith("injury report:|")}
+    old_game_player = {
+        (str(r.get("game_date", "")), str(r.get("matchup", "")).upper(), str(r.get("player", "")).casefold()): r
+        for r in prev.values()
+    }
     new_events = []
     for key, row in new_by_key.items():
         old = prev.get(key, {}).get("status", "")
         person_before = prev_person.get(person_key(row), "")
-        changed_to_out = row["status"] == "OUT" and old != "OUT"
+        # A corrected team mapping is NOT a new injury: an already-OUT player
+        # in the same game must not produce a spurious Telegram alert.
+        earlier_same_player = old_game_player.get((row["game_date"], row["matchup"].upper(), row["player"].casefold()))
+        was_out_in_game = earlier_same_player is not None and earlier_same_player.get("status") == "OUT"
+        changed_to_out = row["status"] == "OUT" and old != "OUT" and not was_out_in_game
         if baseline and changed_to_out:
             # Out for a NEW future matchup but already Out in previous game
             # must not generate recycled news.
