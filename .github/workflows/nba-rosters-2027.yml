@@ -1,0 +1,61 @@
+name: NBA - aktualne sklady 2026-27
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 12 * * *' # Raz dziennie (UTC); GitHub może opóźnić wywołanie
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-roster-snapshot
+  cancel-in-progress: false
+
+jobs:
+  rosters:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Pobierz najnowszy kod
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Zainstaluj bibliotekę
+        run: python -m pip install -q requests
+      - name: Sprawdz 30 skladow ESPN
+        run: python sync_nba_rosters.py
+      - name: Zapisz tylko kompletny snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "nba-roster-bot"
+          git config user.email "nba-roster-bot@users.noreply.github.com"
+          git add data/current_rosters_2026_27.csv data/roster_comparison_2026_27.csv data/roster_metadata_2026_27.json
+          if git diff --cached --quiet; then
+            echo "ROSTERS_NO_CHANGE — bez zapisu"
+            exit 0
+          fi
+          git commit -m "Update verified 2026-27 NBA rosters [skip ci]"
+          for attempt in 1 2 3; do
+            echo "ROSTER PUSH attempt ${attempt}/3"
+            if git push origin HEAD:main; then
+              echo "ROSTERS_SAVED"
+              exit 0
+            fi
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "ROSTER SAVE CONFLICT — nie nadpisano innych zmian"
+              exit 1
+            fi
+            sleep 2
+          done
+          echo "ROSTER SAVE FAILED po 3 probach"
+          exit 1
