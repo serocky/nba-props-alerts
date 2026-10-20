@@ -1,0 +1,71 @@
+name: NBA - TEST analizy na Telegram
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-impact-message:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Pobierz kod i statystyki
+        uses: actions/checkout@v4
+
+      - name: Uruchom Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Zainstaluj biblioteki
+        run: python -m pip install -q pandas numpy requests beautifulsoup4 pymupdf
+
+      - name: Wygeneruj testowa analize i wyslij na Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os
+          from player_impact import historical_data, telegram_impact, analyze_event
+          from free_alert_worker import send_telegram
+
+          if not os.getenv('TELEGRAM_BOT_TOKEN', '').strip() or not os.getenv('TELEGRAM_CHAT_ID', '').strip():
+              raise SystemExit('Brakuje TELEGRAM_BOT_TOKEN lub TELEGRAM_CHAT_ID w GitHub Secrets')
+
+          logs, schedule, source = historical_data(allow_demo=False)
+          if source != 'REAL' or logs is None or logs.empty:
+              raise SystemExit('Brak prawdziwej historii: data/real_player_games.csv')
+
+          # HISTORYCZNY przykład testowy; nie jest ogłoszeniem nowej absencji.
+          event = {
+              'team': 'New Orleans Pelicans',
+              'player': 'DeAndre Jordan',
+              'game_date': '2026-06-01',
+              'matchup': '',
+          }
+          result = analyze_event(event, logs, schedule, top=3)
+          print('Dane:', len(logs), 'wierszy; liczba kandydatow:', len(result['candidates']))
+          if not result['candidates']:
+              raise SystemExit('Brak historycznych porownan z/bez: nie wysylamy pustego testu')
+
+          samples = [f"{x['player']} {x['with_games']}/{x['without_games']} meczow" for x in result['candidates']]
+          print('Proby:', '; '.join(samples))
+
+          text = (
+              '🧪 TEST NBA PROPS LAB — WIADOMOSC TESTOWA\n'
+              '❌ To NIE jest aktualna absencja ani typ bukmacherski.\n'
+              '📚 Historyczne dane sezonu 2025/26.\n'
+              'Przyklad: New Orleans Pelicans, z/bez wystepu DeAndre Jordana.\n'
+              'DNP nie oznacza potwierdzonej kontuzji.\n'
+              + telegram_impact(event, logs, schedule)
+              + '\n\n⚠️ Male proby sa niestabilne. Dane o skladach i kursach na 2026/27 nie sa tu weryfikowane.'
+          )
+          if len(text) > 4096:
+              raise SystemExit('Tekst zbyt dlugi dla Telegrama')
+          if not send_telegram(text):
+              raise SystemExit('Nie wyslano wiadomosci testowej')
+          print('TEST OK — wiadomosc statystyczna zostala wyslana na Telegram')
+          PY
