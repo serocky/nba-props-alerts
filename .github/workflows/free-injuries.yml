@@ -29,6 +29,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          echo 'Workflow version: save-fix-v2'
           git fetch origin main
           git checkout main
           git pull --ff-only origin main
