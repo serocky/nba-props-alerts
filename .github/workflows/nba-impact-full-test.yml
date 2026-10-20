@@ -1,0 +1,66 @@
+name: NBA - TEST pelnego alertu z analiza
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  impact-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install -q requests beautifulsoup4 pymupdf pandas numpy
+
+      - name: End-to-end test - historical impact to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          from player_impact import historical_data, analyze_event
+          from free_alert_worker import format_telegram, send_telegram
+
+          logs, schedule, source = historical_data(allow_demo=False)
+          if source != 'REAL' or logs is None or schedule is None or len(logs) < 1000:
+              raise SystemExit('BRAK PRAWDZIWYCH DANYCH: sprawdz data/real_player_games.csv i data/real_schedule.csv')
+          print('Dane: REAL; wiersze:', len(logs), '; mecze:', logs.game_id.nunique())
+
+          # SYMULACJA: wybieramy nazwisko z sezonu 2025/26 do sprawdzenia
+          # historycznych rozkladow. Nie twierdzimy, ze zawodnik aktualnie jest OUT.
+          fake_event = {
+              'game_date': '2026-10-20', 'matchup': 'NOP@TEST',
+              'team': 'New Orleans Pelicans', 'player': 'DeAndre Jordan',
+              'status': 'OUT', 'previous': 'QUESTIONABLE',
+              'reason': 'SYMULACJA TESTOWA - NIE JEST TO PRAWDZIWA ABSENCJA',
+              'source_url': 'https://official.nba.com/',
+          }
+          result = analyze_event(fake_event, logs, schedule, top=3)
+          print('Analiza:', result['status'], '; kandydatow:', len(result['candidates']))
+          if result['status'] != 'OK' or not result['candidates']:
+              raise SystemExit('Model nie znalazl danych z/bez. Sprawdz zgodnosc nazwisk w CSV i player_impact.py.')
+
+          message = (
+              '🧪🧪🧪 TEST TECHNICZNY — BRAK RZECZYWISTEJ ABSENCJI I TYPOWANIA\n'
+              'Symulacja na danych historycznych 2025/26; nie obstawiaj na tej podstawie.\n\n'
+              + format_telegram(fake_event)
+              + '\n\n🧪 KONIEC TESTU. Kursy i sklady 2026/27 nie zostaly zweryfikowane.'
+          )
+          if 'ZMIANA PRODUKCJI' not in message:
+              raise SystemExit('Analiza nie zostala dolaczona do wiadomosci. Sprawdz free_alert_worker.py, engine.py, pandas i player_impact.py.')
+          if not send_telegram(message):
+              raise SystemExit('Telegram nie jest skonfigurowany: sprawdz GitHub Secrets (bez publikowania tokenu).')
+          print('OK: pelny alert z analiza wyslany na Telegram.')
+          PY
