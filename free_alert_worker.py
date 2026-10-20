@@ -143,8 +143,8 @@ def format_telegram(event: dict, candidates: list[dict] | None = None) -> str:
 
 
 def send_telegram(msg: str) -> bool:
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
-    chat = os.getenv("TELEGRAM_CHAT_ID")
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat = os.getenv("TELEGRAM_CHAT_ID", "").strip()
     if not token or not chat:
         print("TELEGRAM NOT CONFIGURED (dry-run):", msg)
         return False
