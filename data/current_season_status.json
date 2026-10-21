@@ -1,0 +1,12 @@
+{
+  "season": "2026/27",
+  "source": "ESPN scoreboard + summary (public unofficial JSON)",
+  "schema_checks_passed": true,
+  "old_rows": 32179,
+  "current_rows": 84,
+  "new_game_count": 3,
+  "current_games_total": 3,
+  "latest_game_date": "2026-10-20",
+  "current_roster_source": "observed players in completed boxscores only (not full rosters)",
+  "odds_integrated": false
+}
