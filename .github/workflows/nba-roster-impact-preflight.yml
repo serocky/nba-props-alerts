@@ -1,0 +1,47 @@
+name: NBA - TEST filtr aktualnych skladow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Biblioteki
+        run: python -m pip install -q pandas numpy requests beautifulsoup4 pymupdf
+      - name: Sprawdz aktualne sklady i historyczna baze
+        shell: bash
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          from roster_guard import load_verified_rosters, roster_gated_impact
+          from player_impact import historical_data
+          rosters = load_verified_rosters(now=datetime.now(timezone.utc))
+          print('ROSTERS_VERIFIED:', len(rosters), 'druzyn')
+          print('ROSTER_PLAYERS:', sum(map(len, rosters.values())))
+          logs, schedule, provenance = historical_data(allow_demo=False)
+          if provenance != 'REAL' or logs is None or logs.empty:
+              raise SystemExit('ERROR: Brak prawdziwej historii meczow')
+          print('HISTORY_OK:', len(logs), 'wierszy; ostatni mecz:', logs.date.max())
+          # Fictional event for a dry run; NOTHING is sent to Telegram.
+          test_player = next(iter(rosters['BOS'].values()))
+          event = {'team':'Boston Celtics', 'player':test_player,
+                   'game_date':datetime.now(timezone.utc).date().isoformat(),
+                   'matchup':'BOS@NYK'}
+          msg = roster_gated_impact(event, logs, schedule)
+          print('DRY_RUN_TEST_EVENT (fictional; NOT REAL OUT):', test_player)
+          print('DRY_RUN_RESULT:', msg[:1800])
+          print('ROSTER_GUARD_TEST_OK')
+          PY
