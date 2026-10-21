@@ -36,6 +36,19 @@ ESPN_TEAMS = {
     'OKC': 25, 'ORL': 19, 'PHI': 20, 'PHX': 21, 'POR': 22,
     'SAC': 23, 'SAS': 24, 'TOR': 28, 'UTA': 26, 'WAS': 27,
 }
+# The league box-score dataset uses canonical NBA abbreviations, while ESPN
+# sometimes uses shorter abbreviations in roster responses. Keep the canonical
+# output and explicitly allow only the known aliases for that team. ESPN team
+# ID must still match the expected team ID independently.
+ESPN_ABBR_ALIASES = {
+    'GSW': {'GS'},
+    'NOP': {'NO'},
+    'NYK': {'NY'},
+    'SAS': {'SA'},
+    'UTA': {'UTAH'},
+    'WAS': {'WSH'},
+}
+
 ENDPOINT = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{team_id}/roster'
 ROSTER_FIELDS = ('team', 'player', 'espn_player_id', 'position', 'roster_status', 'season_end', 'source_url')
 COMPARE_FIELDS = ('player', 'team_2026_27', 'last_team_2025_26', 'classification', 'history_games_2025_26')
@@ -59,7 +72,7 @@ def roster_items(payload, expected_team: str, team_id: int, url: str):
     if str(team_obj.get('id', '')).strip() != str(team_id):
         raise ValueError(f'Nieprawidłowy ESPN team ID dla {expected_team}')
     abbr = str(team_obj.get('abbreviation') or '').upper()
-    if abbr != expected_team:
+    if abbr != expected_team and abbr not in ESPN_ABBR_ALIASES.get(expected_team, set()):
         raise ValueError(f'Nieprawidłowy skrót drużyny: {expected_team} != {abbr}')
     season = payload.get('season')
     if isinstance(season, dict) and season.get('year') not in (None, SEASON):
