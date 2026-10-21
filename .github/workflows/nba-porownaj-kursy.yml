@@ -1,0 +1,82 @@
+name: NBA - porownaj kursy Superbet STS Fortuna Betclic
+on:
+  workflow_dispatch:
+    inputs:
+      game_date:
+        description: 'Data meczu NBA YYYY-MM-DD (data lokalna meczu w NBA)'
+        required: true
+        type: string
+      game:
+        description: 'Mecz np. BOS@NYK'
+        required: true
+        type: string
+      player:
+        description: 'Zawodnik (dokladne imie i nazwisko)'
+        required: true
+        type: string
+      market:
+        description: 'Statystyka'
+        required: true
+        type: choice
+        options:
+          - PTS
+          - AST
+          - REB
+          - PRA
+      side:
+        description: 'Zaklad'
+        required: true
+        type: choice
+        options:
+          - OVER
+          - UNDER
+      superbet:
+        description: 'Superbet: LINIA@KURS np. 6.5@1.85 (opcjonalnie)'
+        required: false
+        type: string
+      sts:
+        description: 'STS: LINIA@KURS (opcjonalnie)'
+        required: false
+        type: string
+      fortuna:
+        description: 'Fortuna: LINIA@KURS (opcjonalnie)'
+        required: false
+        type: string
+      betclic:
+        description: 'Betclic: LINIA@KURS (opcjonalnie)'
+        required: false
+        type: string
+      checked_at_pl:
+        description: 'Godzina sprawdzenia kursow HH:MM czasu polskiego (opcjonalnie)'
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Zainstaluj requests
+        run: python -m pip install -q requests
+      - name: Porownaj wpisane kursy i wyslij raport
+        env:
+          GAME_DATE: ${{ inputs.game_date }}
+          GAME: ${{ inputs.game }}
+          PLAYER: ${{ inputs.player }}
+          MARKET: ${{ inputs.market }}
+          SIDE: ${{ inputs.side }}
+          SUPERBET: ${{ inputs.superbet }}
+          STS: ${{ inputs.sts }}
+          FORTUNA: ${{ inputs.fortuna }}
+          BETCLIC: ${{ inputs.betclic }}
+          CHECKED_AT_PL: ${{ inputs.checked_at_pl }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python compare_polish_props.py
