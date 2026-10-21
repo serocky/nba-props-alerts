@@ -136,12 +136,16 @@ def format_telegram(event: dict, candidates: list[dict] | None = None) -> str:
     # Add historical game-level teammate impact ONLY when real, documented game data exist.
     # Import lazily: no pandas required for the official PDF-only monitoring path.
     try:
-        from player_impact import historical_data, telegram_impact
+        from player_impact import historical_data
+        from roster_guard import roster_gated_impact
         real_logs, real_schedule, provenance = historical_data(allow_demo=False)
         if provenance == 'REAL' and real_logs is not None:
-            msg += telegram_impact(event, real_logs, real_schedule)
+            msg += roster_gated_impact(event, real_logs, real_schedule)
+        else:
+            msg += '\n\n🛡️ ANALIZA KOLEGÓW WSTRZYMANA: Brak prawdziwej bazy historycznej.'
     except Exception as exc:
         print('ANALIZA HISTORYCZNA NIEDOSTĘPNA:', type(exc).__name__)
+        msg += '\n\n🛡️ ANALIZA KOLEGÓW WSTRZYMANA: Błąd walidacji danych; alert OUT wysłany bez statystyk.' 
     if candidates:
         msg += "\n\n📋 OBSERWOWANE LINIE (wprowadzone ręcznie, NIE live feed):"
         for q in candidates:
