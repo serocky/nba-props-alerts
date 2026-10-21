@@ -1,0 +1,71 @@
+name: NBA - TEST alertu ze sprawdzeniem skladow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-telegram:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Pobierz aktualny kod
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Ustaw Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Zainstaluj biblioteki
+        run: python -m pip install -q requests beautifulsoup4 pymupdf pandas numpy
+
+      - name: Wyslij test filtrowanej analizy na Telegram
+        shell: bash
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from free_alert_worker import format_telegram, send_telegram
+          from player_impact import historical_data
+          from roster_guard import load_verified_rosters
+
+          now = datetime.now(timezone.utc)
+          rosters = load_verified_rosters(now=now)
+          assert len(rosters) == 30, 'Brak 30 aktualnych skladow'
+          logs, schedule, provenance = historical_data(allow_demo=False)
+          assert provenance == 'REAL' and logs is not None and not logs.empty, 'Brak prawdziwej bazy meczow'
+
+          player = next(iter(rosters['BOS'].values()))
+          event = {
+              'team': 'Boston Celtics',
+              'player': player,
+              'status': 'OUT',
+              'previous': 'QUESTIONABLE',
+              'game_date': now.date().isoformat(),
+              'matchup': 'BOS@NYK',
+              'reason': 'TEST - fikcyjna absencja, nie dotyczy realnego meczu',
+              'source_url': 'https://official.nba.com/nba-injury-report/',
+          }
+          body = format_telegram(event)
+          assert 'ANALIZA KOLEGOW WSTRZYMANA' in body.upper() or 'HISTORIA WYLACZNIE' in body.upper() or '🛡️' in body or '📊' in body, 'Nie znaleziono sekcji analizy lub ostrzezenia'
+          msg = (
+              '🧪 TEST SYSTEMU NBA - FIKCYJNA ABSENCJA\n'
+              '⛔ TO NIE JEST PRAWDZIWA INFORMACJA ANI TYP BUKMACHERSKI\n'
+              'Nie obstawiaj na podstawie tej wiadomosci.\n\n' + body
+          )
+          if not send_telegram(msg):
+              raise RuntimeError('Telegram nie wyslal testowej wiadomosci; sprawdz GitHub Secrets')
+          print('TEST_TELEGRAM_SENT')
+          print('ROSTERS_VERIFIED:', len(rosters), 'druzyn')
+          print('HISTORY_ROWS:', len(logs))
+          print('IMPACT_SECTION:', 'HISTORY' if '📊' in body else 'ON_HOLD')
+          print('STATE_UNCHANGED: program nie zapisuje official_snapshot.json')
+          PY
