@@ -51,12 +51,17 @@ def analyze_event(event:dict, logs:pd.DataFrame, schedule:pd.DataFrame, top:int=
     played=hist[(hist.status=='PLAYED')&(hist.minutes>=8)]
     candidates=[]
     for player,n in played.groupby('player').size().sort_values(ascending=False).items():
-        if player.casefold()==absent.casefold() or n<8: continue
+        # 3+ played games in each of two groups require at least 6 appearances.
+        if player.casefold()==absent.casefold() or n<6: continue
         split=teammate_splits(hist,player,absent)
         wy=split['with']; wo=split['without']
-        if wy['n']<5 or wo['n']<3: continue
+        if wy['n']<3 or wo['n']<3: continue
         row={'player':player,'team':team,'vs':opponent,'b2b':None,
-             'with_games':int(wy['n']),'without_games':int(wo['n']),'unknown_games':int(split['unknown'])}
+             'with_games':int(wy['n']),'without_games':int(wo['n']),'unknown_games':int(split['unknown']),
+             'minutes_with':round(wy['minutes'],1),'minutes_without':round(wo['minutes'],1),
+             'quality':('WIEKSZA_PROBA' if wy['n']>=12 and wo['n']>=8
+                        else 'SREDNIA_PROBA' if wy['n']>=8 and wo['n']>=8
+                        else 'SPEKULACYJNA_3_3')}
         b2b=back_to_back(schedule,team,day)
         row['b2b']=b2b
         for metric in ('pts','ast','reb'):
@@ -78,14 +83,32 @@ def analyze_event(event:dict, logs:pd.DataFrame, schedule:pd.DataFrame, top:int=
 
 
 def telegram_impact(event:dict, logs:pd.DataFrame, schedule:pd.DataFrame)->str:
+    """Historical context only. We do NOT verify current rosters or value bets here."""
     res=analyze_event(event,logs,schedule,top=3)
     if not res['candidates']:
-        return '\n\n📊 ANALIZA KOLEGÓW: Brak wystarczających danych with/without (min. 5/3 meczów).'
-    parts=['\n\n📊 ZMIANA PRODUKCJI — HISTORIA (bez automatycznych typów):']
+        return ('\n\n📊 HISTORIA KOLEGÓW: Brak wystarczających meczów z/bez '
+                '(wstępny filtr 3/3) lub brak danych dla tej drużyny. '
+                'Nie wyciągaj wniosków o zakładach.')
+    max_date=logs['date'].max().date().isoformat()
+    parts=['\n\n📊 ZMIANA PRODUKCJI — HISTORYCZNE PORÓWNANIE (NIE TYP):',
+           f'📅 Ostatni mecz w bazie: {max_date}. Skład obecnego sezonu NIEZWERYFIKOWANY.',
+           'ℹ️ "Z/bez" oznacza całe mecze; DNP nie dowodzi kontuzji.']
     for x in res['candidates']:
-        parts.append(f"\n👤 {x['player']} · z/bez: {x['with_games']}/{x['without_games']} gier")
+        quality=('⚠️ SPEKULACYJNE 3/3 (bardzo mała próba)'
+                 if x['quality']=='SPEKULACYJNA_3_3'
+                 else '📘 ŚREDNIA PRÓBA (nadal niezwalidowana)'
+                 if x['quality']=='SREDNIA_PROBA'
+                 else '📗 WIĘKSZA PRÓBA (nadal niezwalidowana)')
+        parts.append(f"\n👤 {x['player']} · z/bez: {x['with_games']}/{x['without_games']} meczów · {quality}")
+        parts.append(f"Minuty: {x['minutes_with']:.1f} → {x['minutes_without']:.1f}")
         for metric,label in [('pts','PTS'),('ast','AST'),('reb','REB')]:
             m=x.get(metric)
-            if m: parts.append(f"{label}: {m['with']:.1f} → {m['without']:.1f} | model {m['forecast']:.1f}")
-    parts.append('⚠️ To nie jest model przyczynowy, ani pewna przewaga nad kursem.')
+            if m:
+                line=f"{label}: {m['with']:.1f} → {m['without']:.1f} | model bazowy {m['forecast']:.1f}"
+                gap=abs(m['forecast']-m['without'])
+                if gap > max(2.0 if metric=='pts' else 0.9, 0.25 * max(m['without'],1.0)):
+                    line += ' ⚠️ rozbieżność prognozy'
+                parts.append(line)
+    parts.append('⚠️ Minimum 3/3 służy WYKRYWANIU KANDYDATÓW, a nie ocenie prawdopodobieństwa. Model bazowy nie oznacza prognozy po absencji.')
+    parts.append('⛔ Bez potwierdzenia składu, aktualnego matchup, kursu i backtestu nie jest to sygnał do gry.')
     return '\n'.join(parts)

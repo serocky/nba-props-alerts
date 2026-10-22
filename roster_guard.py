@@ -20,8 +20,8 @@ from engine import teammate_splits
 
 ROOT = Path(__file__).resolve().parent
 MAX_ROSTER_AGE_HOURS = 48
-MIN_WITH_GAMES = 12
-MIN_WITHOUT_GAMES = 8
+MIN_WITH_GAMES = 3
+MIN_WITHOUT_GAMES = 3
 
 
 def _hold(reason: str) -> str:
@@ -107,26 +107,37 @@ def roster_gated_impact(event: dict, logs, schedule, data_dir: Path = ROOT / 'da
         if (candidate['with_games'] < MIN_WITH_GAMES
                 or candidate['without_games'] < MIN_WITHOUT_GAMES):
             continue
-        # Only describe credible-sized increases; do not imply causal effect.
-        increments = {
-            metric: (candidate.get(metric, {}).get('delta') or 0)
-            for metric in ('pts', 'ast', 'reb')
-        }
-        if not (increments['pts'] >= 1.5 or increments['ast'] >= 0.5 or increments['reb'] >= 0.8):
+        # Detect outsized changes, not tiny fluctuations; exploratory only.
+        increments = {metric: (candidate.get(metric, {}).get('delta') or 0)
+                      for metric in ('pts', 'ast', 'reb')}
+        min_with = candidate.get('minutes_with')
+        min_without = candidate.get('minutes_without')
+        minutes_delta = (float(min_without) - float(min_with)
+                         if min_with is not None and min_without is not None else 0.0)
+        breakout = (increments['pts'] >= 2.5 or increments['ast'] >= 1.0
+                    or increments['reb'] >= 1.5
+                    or (minutes_delta >= 5.0
+                        and (increments['pts'] >= 1.0 or increments['ast'] >= 0.5
+                             or increments['reb'] >= 0.5)))
+        if not breakout:
             continue
         selected.append(candidate)
         if len(selected) == 3:
             break
     if not selected:
-        return _hold('Nie ma kolegów z aktualnego składu spełniających próg 12/8 meczów i dodatniej różnicy')
+        return _hold('Brak kandydatów spełniających próg 3/3 i filtr istotnego wzrostu minut lub PTS/AST/REB')
     pre_event = hist['date'].max()
     latest = pre_event.date().isoformat() if pre_event is not None else 'nieznana'
-    lines = ["\n\n📊 HISTORIA WYŁĄCZNIE Z POTWIERDZONYM SKŁADEM 2026/27 (NIE TYP):",
+    lines = ["\n\n🔎 NBA WYSTRZAŁ — KANDYDACI (NIE TYP):",
              f"🏀 Drużyna: {team} | ostatni mecz w bazie: {latest}",
-             'Wymagane: ≥12 spotkań z kolegą i ≥8 bez kolegi.',
+             'Próg odkrywania: ≥3 mecze Z i ≥3 BEZ kolegi. Nie jest to próba miarodajna.',
              'DNP oznacza brak występu, nie potwierdzoną kontuzję.']
     for c in selected:
-        lines.append(f"\n👤 {c['player']} | z/bez: {c['with_games']}/{c['without_games']} meczów")
+        label = ('🔴 SPEKULACYJNY / BARDZO MAŁA PRÓBA'
+                 if c['with_games'] < 8 or c['without_games'] < 8 else
+                 '🟡 ŚREDNIA PRÓBA' if c['with_games'] < 12 else
+                 '🔵 WIĘKSZA PRÓBA — NADAL BEZ WALIDACJI')
+        lines.append(f"\n👤 {c['player']} | z/bez: {c['with_games']}/{c['without_games']} meczów | {label}")
         # The 2025/26 player_impact module did not include minute splits in
         # candidate rows. Recover them from the same filtered historical games;
         # never invent minutes or crash the real injury alert on a KeyError.
@@ -148,7 +159,9 @@ def roster_gated_impact(event: dict, logs, schedule, data_dir: Path = ROOT / 'da
             x = c.get(stat)
             if x is None:
                 continue
-            lines.append(f"{label}: {x['with']:.1f} → {x['without']:.1f} | szacunek {x['forecast']:.1f}")
-    lines.extend(["⚠️ To porównanie historyczne, NIE efekt przyczynowy absencji.",
+            lines.append(f"{label}: {x['with']:.1f} → {x['without']:.1f} "
+                         f"(Δ {x['delta']:+.1f}) | model bazowy {x['forecast']:.1f}")
+    lines.extend(["⚠️ 3/3 to filtr odkrywania jednorazowych zmian, NIE wiarygodny estymator. Model bazowy ≠ prognoza po absencji.",
+                  "⚠️ To porównanie historyczne, NIE efekt przyczynowy absencji.",
                   "⛔ Bez aktualnego kursu i walidacji modelu nie jest to sygnał do gry."])
     return '\n'.join(lines)
