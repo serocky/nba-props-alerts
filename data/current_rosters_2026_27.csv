@@ -88,15 +88,12 @@ CHI,Tre Jones,4395626,G,active,2027,https://site.api.espn.com/apis/site/v2/sport
 CHI,Zach Collins,4066650,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CLE,Craig Porter Jr.,4701233,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Donovan Mitchell,3908809,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
-CLE,Ernest Udeh Jr.,5106261,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Evan Mobley,4432158,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,James Harden,3992,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Jarrett Allen,4066328,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Jaylon Tyson,4683747,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
-CLE,Khalifa Diop,4997530,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Mario Hezonja,2995706,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Meleek Thomas,5041951,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
-CLE,Nae'Qwan Tomlin,5106268,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Peyton Watson,4576087,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Riley Minix,5177362,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Sam Merrill,4066757,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
@@ -332,6 +329,7 @@ NOP,Trey Murphy III,4397688,F,active,2027,https://site.api.espn.com/apis/site/v2
 NOP,Yves Missi,5061589,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Zion Williamson,4395628,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NYK,Andre Drummond,6585,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18/roster?season=2027
+NYK,Dalton Knecht,4897943,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18/roster?season=2027
 NYK,Jaden Akins,4683730,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18/roster?season=2027
 NYK,Jalen Brunson,3934672,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18/roster?season=2027
 NYK,James Wiseman,4432808,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18/roster?season=2027
