@@ -337,7 +337,6 @@ Jordan Clarkson,NYK,NYK,SAME_TEAM,72
 Jose Alvarado,NYK,NYK,SAME_TEAM,69
 Josh Hart,NYK,NYK,SAME_TEAM,66
 Karl-Anthony Towns,NYK,NYK,SAME_TEAM,75
-Kevin McCullar Jr.,NYK,NYK,SAME_TEAM,21
 Landry Shamet,NYK,NYK,SAME_TEAM,51
 Mikal Bridges,NYK,NYK,SAME_TEAM,82
 Miles McBride,NYK,NYK,SAME_TEAM,41
@@ -359,6 +358,7 @@ Jared McCain,OKC,OKC,SAME_TEAM,67
 Jaylin Williams,OKC,OKC,SAME_TEAM,65
 Josh Dix,OKC,,NO_2025_26_HISTORY,0
 Kenrich Williams,OKC,OKC,SAME_TEAM,56
+Micah Peavy,OKC,NOP,CHANGED_TEAM,61
 Nikola Topic,OKC,OKC,SAME_TEAM,10
 Otega Oweh,OKC,,NO_2025_26_HISTORY,0
 Shai Gilgeous-Alexander,OKC,OKC,SAME_TEAM,68
@@ -446,6 +446,7 @@ Malik Monk,SAC,SAC,SAME_TEAM,62
 Maxime Raynaud,SAC,SAC,SAME_TEAM,74
 Nique Clifford,SAC,SAC,SAME_TEAM,75
 Precious Achiuwa,SAC,SAC,SAME_TEAM,73
+Sean Pedulla,SAC,LAC,CHANGED_TEAM,7
 Zach LaVine,SAC,SAC,SAME_TEAM,39
 Carter Bryant,SAS,SAS,SAME_TEAM,71
 David Jones Garcia,SAS,SAS,SAME_TEAM,11
