@@ -88,6 +88,7 @@ CHI,Tre Jones,4395626,G,active,2027,https://site.api.espn.com/apis/site/v2/sport
 CHI,Zach Collins,4066650,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CLE,Craig Porter Jr.,4701233,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Donovan Mitchell,3908809,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
+CLE,Ernest Udeh Jr.,5106261,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Evan Mobley,4432158,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,James Harden,3992,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Jarrett Allen,4066328,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
@@ -206,6 +207,7 @@ IND,Quenton Jackson,4592829,G,active,2027,https://site.api.espn.com/apis/site/v2
 IND,T.J. McConnell,2530530,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/11/roster?season=2027
 IND,Tyrese Haliburton,4396993,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/11/roster?season=2027
 LAC,Baba Miller,5075626,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12/roster?season=2027
+LAC,Blake Wesley,4683935,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12/roster?season=2027
 LAC,Bradley Beal,6580,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12/roster?season=2027
 LAC,Brandon Ingram,3913176,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12/roster?season=2027
 LAC,Brook Lopez,3448,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12/roster?season=2027
