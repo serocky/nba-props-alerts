@@ -327,7 +327,7 @@ NOP,Jordan Poole,4277956,G,active,2027,https://site.api.espn.com/apis/site/v2/sp
 NOP,Julian Reese,4683742,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Karlo Matkovic,4997538,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Malik Dia,4712862,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
-NOP,Saddiq Bey,4397136,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
+NOP,Saddiq Bey,4397136,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Trendon Watford,4431675,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Trey Murphy III,4397688,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
 NOP,Yves Missi,5061589,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3/roster?season=2027
@@ -485,7 +485,6 @@ TOR,RJ Barrett,4395625,F,active,2027,https://site.api.espn.com/apis/site/v2/spor
 TOR,Scottie Barnes,4433134,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/roster?season=2027
 TOR,Trayce Jackson-Davis,4431684,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/roster?season=2027
 UTA,Ace Bailey,4873138,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
-UTA,Blake Hinson,4396963,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Brice Sensabaugh,5105839,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Darryn Peterson,5041955,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Harrison Ingram,4433618,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
@@ -496,6 +495,7 @@ UTA,Josh Green,4432811,G,active,2027,https://site.api.espn.com/apis/site/v2/spor
 UTA,Josh Okogie,4065663,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Jusuf Nurkic,3102530,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Keyonte George,4433627,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
+UTA,Kobe Bufkin,4683736,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Kyle Filipowski,4684793,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Lauri Markkanen,4066336,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
 UTA,Mo Bamba,4277919,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26/roster?season=2027
