@@ -8,7 +8,7 @@
       "player": "Paolo Banchero",
       "status": "OUT",
       "reason": "Sprain",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|orl@phx|orlando magic|jonathan isaac": {
       "game_date": "2026-11-05",
@@ -17,7 +17,7 @@
       "player": "Jonathan Isaac",
       "status": "OUT",
       "reason": "Management",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|orl@phx|orlando magic|izaiyah nelson": {
       "game_date": "2026-11-05",
@@ -26,7 +26,7 @@
       "player": "Izaiyah Nelson",
       "status": "OUT",
       "reason": "Recovery",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|orl@phx|orlando magic|noah penda": {
       "game_date": "2026-11-05",
@@ -35,7 +35,7 @@
       "player": "Noah Penda",
       "status": "OUT",
       "reason": "Hamstring",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|orl@phx|orlando magic|jalen suggs": {
       "game_date": "2026-11-05",
@@ -44,7 +44,7 @@
       "player": "Jalen Suggs",
       "status": "OUT",
       "reason": "/ Bone Bruise",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|mia@gsw|golden state warriors|jimmy butler iii": {
       "game_date": "2026-11-05",
@@ -53,7 +53,7 @@
       "player": "Jimmy Butler III",
       "status": "OUT",
       "reason": "Surgery",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|mia@gsw|golden state warriors|moses moody": {
       "game_date": "2026-11-05",
@@ -62,7 +62,7 @@
       "player": "Moses Moody",
       "status": "OUT",
       "reason": "Repair / Surgery",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|mia@gsw|golden state warriors|kristaps porzingis": {
       "game_date": "2026-11-05",
@@ -71,7 +71,7 @@
       "player": "Kristaps Porzingis",
       "status": "OUT",
       "reason": "Not With Team",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     },
     "2026-11-05|mia@gsw|golden state warriors|gui santos": {
       "game_date": "2026-11-05",
@@ -80,7 +80,7 @@
       "player": "Gui Santos",
       "status": "OUT",
       "reason": "Injury/Illness - Left Knee Tendinitis",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf"
     }
   },
   "by_person": {
@@ -2539,9 +2539,9 @@
   ],
   "pending": [],
   "metadata": {
-    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_05_30AM.pdf",
-    "report_at": "2026-11-05T05:30:00-05:00",
-    "fetched_at": "2026-11-05T10:41:47.020025+00:00",
+    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_01_15PM.pdf",
+    "report_at": "2026-11-05T13:15:00-05:00",
+    "fetched_at": "2026-11-05T18:17:47.529962+00:00",
     "count": 9,
     "state": "ready"
   }
