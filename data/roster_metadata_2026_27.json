@@ -1,10 +1,10 @@
 {
   "status": "VERIFIED_30_TEAMS_FROM_ESPN",
   "season_end": 2027,
-  "fetched_at_utc": "2026-11-07T17:45:18+00:00",
+  "fetched_at_utc": "2026-11-08T17:55:41+00:00",
   "teams": 30,
-  "players": 521,
-  "roster_sha256": "3d938c06dd23dba20c09a1c9bd188d68c8f95e025d70d39c68cb06c3e06a340b",
+  "players": 523,
+  "roster_sha256": "6ca5424865ff792cb84072ef7b5e803d758b83a3055c51cc7f2e3ad85cad1faa",
   "source": "ESPN public roster endpoint (unofficial; may change)",
   "warning": "Roster ≠ confirmation of game availability; verify injuries separately."
 }
