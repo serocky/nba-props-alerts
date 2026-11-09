@@ -356,7 +356,6 @@ OKC,Bennett Stirtz,5241364,G,active,2027,https://site.api.espn.com/apis/site/v2/
 OKC,Brooks Barnhizer,4684208,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Cason Wallace,4683692,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Chet Holmgren,4433255,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
-OKC,Dalen Terry,4433159,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Isaiah Hartenstein,4222252,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Jalen Williams,4593803,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Jared McCain,4683778,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
@@ -365,6 +364,7 @@ OKC,Josh Dix,5105800,G,active,2027,https://site.api.espn.com/apis/site/v2/sports
 OKC,Kenrich Williams,3133626,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Micah Peavy,4432185,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Nikola Topic,5159925,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
+OKC,Nique Clifford,4702384,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Shai Gilgeous-Alexander,4278073,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 OKC,Thomas Sorber,5061603,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25/roster?season=2027
 ORL,Alex Morales,4593034,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/19/roster?season=2027
@@ -448,7 +448,6 @@ SAC,Keegan Murray,4594327,F,active,2027,https://site.api.espn.com/apis/site/v2/s
 SAC,Leaky Black,4395650,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
 SAC,Malik Monk,4066262,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
 SAC,Maxime Raynaud,4898371,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
-SAC,Nique Clifford,4702384,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
 SAC,Precious Achiuwa,4431679,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
 SAC,Sean Pedulla,4709131,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
 SAC,Zach LaVine,3064440,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23/roster?season=2027
