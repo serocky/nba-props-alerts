@@ -37,6 +37,7 @@ BKN,Terance Mann,3907823,G,active,2027,https://site.api.espn.com/apis/site/v2/sp
 BKN,Tyler Bilodeau,5105626,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/17/roster?season=2027
 BOS,Amari Williams,4702745,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
 BOS,Baylor Scheierman,4593841,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
+BOS,Chris Cenac Jr.,5142621,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
 BOS,Derrick White,3078576,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
 BOS,Devin Carter,4433188,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
 BOS,Dillon Mitchell,5106283,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2/roster?season=2027
@@ -138,7 +139,6 @@ DEN,Tyus Jones,3135046,G,active,2027,https://site.api.espn.com/apis/site/v2/spor
 DEN,Zeke Nnaji,4431690,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/7/roster?season=2027
 DET,Ausar Thompson,4684742,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
 DET,Cade Cunningham,4432166,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
-DET,Chaz Lanier,4700852,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
 DET,Daniss Jenkins,5107199,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
 DET,Duncan Robinson,3157465,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
 DET,Ebuka Okorie,5258459,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/roster?season=2027
@@ -231,13 +231,13 @@ LAL,Arthur Kaluma,4433599,F,active,2027,https://site.api.espn.com/apis/site/v2/s
 LAL,Austin Reaves,4066457,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Bronny James,4683774,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Cameron Carr,5113969,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
+LAL,Carson Cooper,5105817,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Chris Manon,4702972,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Collin Sexton,4277811,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Jaden Hardy,4868423,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Jake LaRavia,4592691,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Jarred Vanderbilt,4278077,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Kevon Looney,3155535,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
-LAL,Lawson Lovering,4596528,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Luka Doncic,3945274,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Matisse Thybulle,3907498,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 LAL,Quentin Grimes,4397014,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
@@ -246,7 +246,6 @@ LAL,Walker Kessler,4433136,C,active,2027,https://site.api.espn.com/apis/site/v2/
 LAL,Ziaire Williams,4433137,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/roster?season=2027
 MEM,Cam Spencer,4433083,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
 MEM,Cameron Boozer,5041935,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
-MEM,Carson Cooper,5105817,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
 MEM,Cedric Coward,4903027,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
 MEM,GG Jackson,5105550,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
 MEM,Isaiah Stewart,4432810,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29/roster?season=2027
@@ -303,7 +302,6 @@ MIN,Ayo Dosunmu,4397002,G,active,2027,https://site.api.espn.com/apis/site/v2/spo
 MIN,Bones Hyland,4592492,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Cody Williams,4895758,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Donte DiVincenzo,3934673,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
-MIN,Isaiah Evans,5061585,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Jaden McDaniels,4431671,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Jaylen Clark,4432247,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Joan Beringer,5279133,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
