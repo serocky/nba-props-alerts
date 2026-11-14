@@ -83,6 +83,7 @@ CHI,Matas Buzelis,4711294,F,active,2027,https://site.api.espn.com/apis/site/v2/s
 CHI,Nic Claxton,4278067,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CHI,Noa Essengue,5242496,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CHI,Norman Powell,2595516,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
+CHI,Orlando Robinson,4593049,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CHI,Patrick Williams,4431687,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CHI,Tobe Awaka,5105555,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
 CHI,Tre Jones,4395626,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4/roster?season=2027
@@ -94,8 +95,10 @@ CLE,Evan Mobley,4432158,C,active,2027,https://site.api.espn.com/apis/site/v2/spo
 CLE,James Harden,3992,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Jarrett Allen,4066328,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Jaylon Tyson,4683747,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
+CLE,Khalifa Diop,4997530,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Mario Hezonja,2995706,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Meleek Thomas,5041951,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
+CLE,Nae'Qwan Tomlin,5106268,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Norchad Omier,4702134,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Peyton Watson,4576087,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
 CLE,Riley Minix,5177362,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5/roster?season=2027
@@ -306,6 +309,7 @@ MIN,Isaiah Evans,5061585,F,active,2027,https://site.api.espn.com/apis/site/v2/sp
 MIN,Jaden McDaniels,4431671,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Jaylen Clark,4432247,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Joan Beringer,5279133,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
+MIN,Johni Broome,4433569,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Jonathan Kuminga,4433247,F,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,LaMelo Ball,4432816,G,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
 MIN,Rocco Zikarsky,5157587,C,active,2027,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16/roster?season=2027
