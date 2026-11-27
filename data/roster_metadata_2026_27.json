@@ -1,7 +1,7 @@
 {
   "status": "VERIFIED_30_TEAMS_FROM_ESPN",
   "season_end": 2027,
-  "fetched_at_utc": "2026-11-26T21:30:02+00:00",
+  "fetched_at_utc": "2026-11-27T21:16:10+00:00",
   "teams": 30,
   "players": 530,
   "roster_sha256": "db65d8e96c1c8306ebec5c7e451c5c9ea30a90c75172e270647a2af4eba23b7e",
