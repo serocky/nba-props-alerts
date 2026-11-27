@@ -1,6 +1,402 @@
 {
   "initialized": true,
   "status_rows": {
+    "2026-11-27|mia@nyk|miami heat|giannis antetokounmpo": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "Miami Heat",
+      "player": "Giannis Antetokounmpo",
+      "status": "PROBABLE",
+      "reason": "Injury/Illness - Right Groin Tendinitis",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|miami heat|tre donaldson": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "Miami Heat",
+      "player": "Tre Donaldson",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|miami heat|vladislav goldin": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "Miami Heat",
+      "player": "Vladislav Goldin",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|miami heat|andrew wiggins": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "Miami Heat",
+      "player": "Andrew Wiggins",
+      "status": "PROBABLE",
+      "reason": "Injury/Illness - Right Ankle Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|new york knicks|og anunoby": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "New York Knicks",
+      "player": "OG Anunoby",
+      "status": "DOUBTFUL",
+      "reason": "Injury/Illness - Left Calf Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|new york knicks|jordan clarkson": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "New York Knicks",
+      "player": "Jordan Clarkson",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Right Plantar Fasciitis",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|new york knicks|andre drummond": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "New York Knicks",
+      "player": "Andre Drummond",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Head",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mia@nyk|new york knicks|miles mcbride": {
+      "game_date": "2026-11-27",
+      "matchup": "MIA@NYK",
+      "team": "New York Knicks",
+      "player": "Miles McBride",
+      "status": "QUESTIONABLE",
+      "reason": "Tightness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|brooklyn nets|tyler bilodeau": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Tyler Bilodeau",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|brooklyn nets|joshua jefferson": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Joshua Jefferson",
+      "status": "OUT",
+      "reason": "G League - On Assignment",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|brooklyn nets|drake powell": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Drake Powell",
+      "status": "OUT",
+      "reason": "G League - On Assignment",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|brooklyn nets|nolan traore": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Nolan Traore",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|brooklyn nets|moritz wagner": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Moritz Wagner",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|rj barrett": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "RJ Barrett",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|nate bittle": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Nate Bittle",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|kawhi leonard": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Kawhi Leonard",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|alijah martin": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Alijah Martin",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Knee Soreness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|kevin mccullar jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Kevin McCullar Jr.",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|bkn@tor|toronto raptors|malachi smith": {
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Malachi Smith",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|milwaukee bucks|kam jones": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Milwaukee Bucks",
+      "player": "Kam Jones",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|milwaukee bucks|bogoljub markovic": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Milwaukee Bucks",
+      "player": "Bogoljub Markovic",
+      "status": "OUT",
+      "reason": "G League - On Assignment",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|milwaukee bucks|cormac ryan": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Milwaukee Bucks",
+      "player": "Cormac Ryan",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|cade cunningham": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Cade Cunningham",
+      "status": "OUT",
+      "reason": "Tendinopathy",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|jalen duren": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Jalen Duren",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|ebuka okorie": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Ebuka Okorie",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Oblique Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|ugonna onyenso": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Ugonna Onyenso",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|taurean prince": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Taurean Prince",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Arthroscopy",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mil@det|detroit pistons|duncan robinson": {
+      "game_date": "2026-11-27",
+      "matchup": "MIL@DET",
+      "team": "Detroit Pistons",
+      "player": "Duncan Robinson",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Quadriceps Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|philadelphia 76ers|jaylen brown": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Philadelphia 76ers",
+      "player": "Jaylen Brown",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|philadelphia 76ers|joel embiid": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Philadelphia 76ers",
+      "player": "Joel Embiid",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Illness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|philadelphia 76ers|ariel hukporti": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Philadelphia 76ers",
+      "player": "Ariel Hukporti",
+      "status": "OUT",
+      "reason": "Rupture / Tear",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|johnny furphy": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "Johnny Furphy",
+      "status": "OUT",
+      "reason": "Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|tyrese haliburton": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "Tyrese Haliburton",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|t.j. mcconnell": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "T.J. McConnell",
+      "status": "QUESTIONABLE",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|larry nance jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "Larry Nance Jr.",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Right Ankle Bruise",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|kelly oubre jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "Kelly Oubre Jr.",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Right Hand Laceration",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|phi@ind|indiana pacers|ben sheppard": {
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Indiana Pacers",
+      "player": "Ben Sheppard",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Meniscus Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|rafael castro": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Rafael Castro",
+      "status": "DOUBTFUL",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|mouhamed gueye": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Mouhamed Gueye",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Foot Fracture",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|jock landale": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Jock Landale",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Great Toe Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|cj mccollum": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "CJ McCollum",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Calf Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|asa newell": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Asa Newell",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Great Toe Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|henri veesaar": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Henri Veesaar",
+      "status": "OUT",
+      "reason": "Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|atl@bos|atlanta hawks|jalen wilson": {
+      "game_date": "2026-11-27",
+      "matchup": "ATL@BOS",
+      "team": "Atlanta Hawks",
+      "player": "Jalen Wilson",
+      "status": "DOUBTFUL",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
     "2026-11-27|atl@bos|boston celtics|devin carter": {
       "game_date": "2026-11-27",
       "matchup": "ATL@BOS",
@@ -8,7 +404,7 @@
       "player": "Devin Carter",
       "status": "OUT",
       "reason": "G League - Two-Way",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
     },
     "2026-11-27|atl@bos|boston celtics|dillon mitchell": {
       "game_date": "2026-11-27",
@@ -17,7 +413,7 @@
       "player": "Dillon Mitchell",
       "status": "OUT",
       "reason": "G League - Two-Way",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
     },
     "2026-11-27|atl@bos|boston celtics|mitchell robinson": {
       "game_date": "2026-11-27",
@@ -26,7 +422,7 @@
       "player": "Mitchell Robinson",
       "status": "QUESTIONABLE",
       "reason": "Injury/Illness - Illness",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
     },
     "2026-11-27|atl@bos|boston celtics|amari williams": {
       "game_date": "2026-11-27",
@@ -35,7 +431,511 @@
       "player": "Amari Williams",
       "status": "OUT",
       "reason": "G League - Two-Way",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf"
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|cameron boozer": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Cameron Boozer",
+      "status": "OUT",
+      "reason": "Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|zach edey": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Zach Edey",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Ankle Soreness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|jerami grant": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Jerami Grant",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Calf Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|gg jackson": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "GG Jackson",
+      "status": "OUT",
+      "reason": "Fracture",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|karim lopez": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Karim Lopez",
+      "status": "OUT",
+      "reason": "G League - On Assignment",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|scotty pippen jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Scotty Pippen Jr.",
+      "status": "OUT",
+      "reason": "Herniation",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|richie saunders": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Richie Saunders",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Knee Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|memphis grizzlies|isaiah stewart": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Memphis Grizzlies",
+      "player": "Isaiah Stewart",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Right Hip Soreness",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|lamelo ball": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "LaMelo Ball",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Ankle Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|joan beringer": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "Joan Beringer",
+      "status": "AVAILABLE",
+      "reason": "Injury/Illness - Face Mask",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|jaylen clark": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "Jaylen Clark",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|donte divincenzo": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "Donte DiVincenzo",
+      "status": "OUT",
+      "reason": "Repair / Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|anthony edwards": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "Anthony Edwards",
+      "status": "OUT",
+      "reason": "Arthroscopy",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|mem@min|minnesota timberwolves|rocco zikarsky": {
+      "game_date": "2026-11-27",
+      "matchup": "MEM@MIN",
+      "team": "Minnesota Timberwolves",
+      "player": "Rocco Zikarsky",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|dallas mavericks|tarik biberovic": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Dallas Mavericks",
+      "player": "Tarik Biberovic",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Heel Bursitis",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|dallas mavericks|sergio de larrea": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Dallas Mavericks",
+      "player": "Sergio de Larrea",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Knee Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|dallas mavericks|tobi lawal": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Dallas Mavericks",
+      "player": "Tobi Lawal",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Groin Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|dallas mavericks|dereck lively ii": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Dallas Mavericks",
+      "player": "Dereck Lively II",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Foot Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|dallas mavericks|caleb martin": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Dallas Mavericks",
+      "player": "Caleb Martin",
+      "status": "AVAILABLE",
+      "reason": "Injury/Illness - Right Thumb Splint",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|dal@phx|phoenix suns|mark williams": {
+      "game_date": "2026-11-27",
+      "matchup": "DAL@PHX",
+      "team": "Phoenix Suns",
+      "player": "Mark Williams",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Shoulder Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|denver nuggets|daron holmes ii": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Denver Nuggets",
+      "player": "DaRon Holmes II",
+      "status": "OUT",
+      "reason": "G League - On Assignment",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|denver nuggets|bryce hopkins": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Denver Nuggets",
+      "player": "Bryce Hopkins",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|denver nuggets|cam whitmore": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Denver Nuggets",
+      "player": "Cam Whitmore",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|jonas aidoo": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Jonas Aidoo",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|kobe bufkin": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Kobe Bufkin",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|jaxson hayes": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Jaxson Hayes",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Left Knee Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|harrison ingram": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Harrison Ingram",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|jaren jackson jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Jaren Jackson Jr.",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right MCL Tear",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|lauri markkanen": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Lauri Markkanen",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Hand Fracture",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|den@uta|utah jazz|jusuf nurkic": {
+      "game_date": "2026-11-27",
+      "matchup": "DEN@UTA",
+      "team": "Utah Jazz",
+      "player": "Jusuf Nurkic",
+      "status": "QUESTIONABLE",
+      "reason": "Plate Tear",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|golden state warriors|jimmy butler iii": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Golden State Warriors",
+      "player": "Jimmy Butler III",
+      "status": "OUT",
+      "reason": "Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|golden state warriors|stephen curry": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Golden State Warriors",
+      "player": "Stephen Curry",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Oblique Tear",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|golden state warriors|moses moody": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Golden State Warriors",
+      "player": "Moses Moody",
+      "status": "OUT",
+      "reason": "Repair / Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|golden state warriors|kristaps porzingis": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Golden State Warriors",
+      "player": "Kristaps Porzingis",
+      "status": "OUT",
+      "reason": "Not With Team",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|portland trail blazers|vit krejci": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Portland Trail Blazers",
+      "player": "Vit Krejci",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Ankle Fracture",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|portland trail blazers|ja morant": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Portland Trail Blazers",
+      "player": "Ja Morant",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Hamstring Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|portland trail blazers|shaedon sharpe": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Portland Trail Blazers",
+      "player": "Shaedon Sharpe",
+      "status": "OUT",
+      "reason": "Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|gsw@por|portland trail blazers|chris youngblood": {
+      "game_date": "2026-11-27",
+      "matchup": "GSW@POR",
+      "team": "Portland Trail Blazers",
+      "player": "Chris Youngblood",
+      "status": "OUT",
+      "reason": "Bone Bruise",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|los angeles lakers|quentin grimes": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "Los Angeles Lakers",
+      "player": "Quentin Grimes",
+      "status": "AVAILABLE",
+      "reason": "Injury/Illness - Right Finger Splint",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|los angeles lakers|austin reaves": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "Los Angeles Lakers",
+      "player": "Austin Reaves",
+      "status": "QUESTIONABLE",
+      "reason": "Bone Bruise",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|san antonio spurs|maliq brown": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "San Antonio Spurs",
+      "player": "Maliq Brown",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|san antonio spurs|de'aaron fox": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "San Antonio Spurs",
+      "player": "De'Aaron Fox",
+      "status": "QUESTIONABLE",
+      "reason": "Injury/Illness - Right Shin Contusion",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|san antonio spurs|dylan harper": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "San Antonio Spurs",
+      "player": "Dylan Harper",
+      "status": "QUESTIONABLE",
+      "reason": "Rotator Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|san antonio spurs|tobias harris": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "San Antonio Spurs",
+      "player": "Tobias Harris",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Calf Strain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|lal@sas|san antonio spurs|jayden quaintance": {
+      "game_date": "2026-11-27",
+      "matchup": "LAL@SAS",
+      "team": "San Antonio Spurs",
+      "player": "Jayden Quaintance",
+      "status": "OUT",
+      "reason": "Injury/Illness - Right Knee Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|malik dia": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Malik Dia",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|bennedict mathurin": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Bennedict Mathurin",
+      "status": "DOUBTFUL",
+      "reason": "Injury/Illness - Left Plantar Fasciitis",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|dejounte murray": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Dejounte Murray",
+      "status": "OUT",
+      "reason": "Injury/Illness - Left Ankle Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|jaron pierre jr.": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Jaron Pierre Jr.",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|julian reese": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Julian Reese",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|new orleans pelicans|trendon watford": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Trendon Watford",
+      "status": "PROBABLE",
+      "reason": "Injury/Illness - Right Ankle Sprain",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|la clippers|bradley beal": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "LA Clippers",
+      "player": "Bradley Beal",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|la clippers|cam christie": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "LA Clippers",
+      "player": "Cam Christie",
+      "status": "QUESTIONABLE",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|la clippers|nick martinelli": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "LA Clippers",
+      "player": "Nick Martinelli",
+      "status": "QUESTIONABLE",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|la clippers|jordan miller": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "LA Clippers",
+      "player": "Jordan Miller",
+      "status": "OUT",
+      "reason": "Surgery",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    "2026-11-27|nop@lac|la clippers|jalen pickett": {
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "LA Clippers",
+      "player": "Jalen Pickett",
+      "status": "QUESTIONABLE",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
     }
   },
   "by_person": {
@@ -76,7 +976,7 @@
     "atlanta hawks|keshon gilbert": "OUT",
     "atlanta hawks|mouhamed gueye": "OUT",
     "atlanta hawks|henri veesaar": "OUT",
-    "atlanta hawks|jalen wilson": "OUT",
+    "atlanta hawks|jalen wilson": "DOUBTFUL",
     "orlando magic|anthony black": "OUT",
     "orlando magic|jonathan isaac": "OUT",
     "orlando magic|izaiyah nelson": "OUT",
@@ -89,14 +989,14 @@
     "brooklyn nets|tyler bilodeau": "OUT",
     "indiana pacers|kobe brown": "AVAILABLE",
     "indiana pacers|johnny furphy": "OUT",
-    "indiana pacers|t.j. mcconnell": "OUT",
+    "indiana pacers|t.j. mcconnell": "QUESTIONABLE",
     "indiana pacers|aaron nesmith": "OUT",
     "indiana pacers|jalen slawson": "AVAILABLE",
     "indiana pacers|braden smith": "AVAILABLE",
     "utah jazz|trey alexander": "OUT",
     "utah jazz|tony bradley": "AVAILABLE",
     "utah jazz|blake hinson": "OUT",
-    "utah jazz|jusuf nurkic": "OUT",
+    "utah jazz|jusuf nurkic": "QUESTIONABLE",
     "memphis grizzlies|isaiah stewart": "QUESTIONABLE",
     "dallas mavericks|santi aldama": "AVAILABLE",
     "dallas mavericks|tarik biberovic": "OUT",
@@ -129,7 +1029,7 @@
     "la clippers|jordan miller": "OUT",
     "la clippers|yanic konan niederhauser": "OUT",
     "la clippers|max strus": "OUT",
-    "toronto raptors|malachi smith": "AVAILABLE",
+    "toronto raptors|malachi smith": "OUT",
     "minnesota timberwolves|zyon pullin": "AVAILABLE",
     "minnesota timberwolves|rocco zikarsky": "OUT",
     "phoenix suns|drew timme": "OUT",
@@ -150,8 +1050,8 @@
     "san antonio spurs|de'aaron fox": "QUESTIONABLE",
     "san antonio spurs|keldon johnson": "AVAILABLE",
     "cleveland cavaliers|jr., ernest udeh": "OUT",
-    "new orleans pelicans|malik dia": "AVAILABLE",
-    "new orleans pelicans|jaron pierre jr.": "AVAILABLE",
+    "new orleans pelicans|malik dia": "OUT",
+    "new orleans pelicans|jaron pierre jr.": "OUT",
     "new orleans pelicans|julian reese": "OUT",
     "utah jazz|harrison ingram": "OUT",
     "los angeles lakers|jake laravia": "OUT",
@@ -179,11 +1079,11 @@
     "new york knicks|jose alvarado": "AVAILABLE",
     "detroit pistons|jalen duren": "OUT",
     "detroit pistons|ausar thompson": "AVAILABLE",
-    "memphis grizzlies|zach edey": "OUT",
+    "memphis grizzlies|zach edey": "QUESTIONABLE",
     "sacramento kings|keegan murray": "AVAILABLE",
     "utah jazz|kobe bufkin": "OUT",
     "brooklyn nets|mikel brown jr.": "AVAILABLE",
-    "philadelphia 76ers|joel embiid": "OUT",
+    "philadelphia 76ers|joel embiid": "QUESTIONABLE",
     "philadelphia 76ers|jabari walker": "AVAILABLE",
     "sacramento kings|sean pedulla": "OUT",
     "toronto raptors|kawhi leonard": "OUT",
@@ -201,7 +1101,7 @@
     "oklahoma city thunder|cason wallace": "OUT",
     "oklahoma city thunder|jalen williams": "OUT",
     "memphis grizzlies|karim lopez": "OUT",
-    "utah jazz|jaxson hayes": "OUT",
+    "utah jazz|jaxson hayes": "QUESTIONABLE",
     "brooklyn nets|joshua jefferson": "OUT",
     "brooklyn nets|grant nelson": "AVAILABLE",
     "brooklyn nets|drake powell": "OUT",
@@ -242,7 +1142,7 @@
     "cleveland cavaliers|tristan enaruna": "OUT",
     "new orleans pelicans|dejounte murray": "OUT",
     "charlotte hornets|dennis schroder": "OUT",
-    "philadelphia 76ers|jaylen brown": "AVAILABLE",
+    "philadelphia 76ers|jaylen brown": "OUT",
     "brooklyn nets|noah clowney": "AVAILABLE",
     "new york knicks|karl-anthony towns": "AVAILABLE",
     "memphis grizzlies|ty jerome": "AVAILABLE",
@@ -263,9 +1163,9 @@
     "miami heat|tre donaldson": "OUT",
     "miami heat|tim hardaway jr.": "AVAILABLE",
     "atlanta hawks|kingston flemings": "AVAILABLE",
-    "indiana pacers|larry nance jr.": "OUT",
+    "indiana pacers|larry nance jr.": "QUESTIONABLE",
     "indiana pacers|pascal siakam": "AVAILABLE",
-    "minnesota timberwolves|lamelo ball": "AVAILABLE",
+    "minnesota timberwolves|lamelo ball": "QUESTIONABLE",
     "minnesota timberwolves|terrence shannon jr": "OUT",
     "boston celtics|paul george": "OUT",
     "toronto raptors|scottie barnes": "OUT",
@@ -278,12 +1178,12 @@
     "boston celtics|amari williams": "OUT",
     "charlotte hornets|pj hall": "AVAILABLE",
     "oklahoma city thunder|jaylin williams": "OUT",
-    "indiana pacers|kelly oubre jr.": "AVAILABLE",
+    "indiana pacers|kelly oubre jr.": "QUESTIONABLE",
     "utah jazz|mo bamba": "AVAILABLE",
     "phoenix suns|rasheer fleming": "AVAILABLE",
     "phoenix suns|jordan goodwin": "QUESTIONABLE",
     "sacramento kings|precious achiuwa": "AVAILABLE",
-    "miami heat|giannis antetokounmpo": "AVAILABLE",
+    "miami heat|giannis antetokounmpo": "PROBABLE",
     "washington wizards|bilal coulibaly": "OUT",
     "milwaukee bucks|kam jones": "OUT",
     "sacramento kings|daeqwon plowden": "OUT",
@@ -327,18 +1227,18 @@
     "golden state warriors|will richard": "AVAILABLE",
     "houston rockets|oscar tshiebwe": "OUT",
     "los angeles lakers|quentin grimes": "AVAILABLE",
-    "los angeles lakers|austin reaves": "OUT",
+    "los angeles lakers|austin reaves": "QUESTIONABLE",
     "toronto raptors|collin murray-boyles": "AVAILABLE",
-    "new orleans pelicans|trendon watford": "OUT",
+    "new orleans pelicans|trendon watford": "PROBABLE",
     "new orleans pelicans|zion williamson": "AVAILABLE",
     "milwaukee bucks|tyler herro": "AVAILABLE",
-    "la clippers|cam christie": "OUT",
-    "la clippers|nick martinelli": "OUT",
+    "la clippers|cam christie": "QUESTIONABLE",
+    "la clippers|nick martinelli": "QUESTIONABLE",
     "milwaukee bucks|kel'el ware": "AVAILABLE",
     "orlando magic|tristan da silva": "AVAILABLE",
     "toronto raptors|trayce jackson-davis": "OUT",
     "brooklyn nets|nolan traore": "OUT",
-    "new orleans pelicans|bennedict mathurin": "OUT",
+    "new orleans pelicans|bennedict mathurin": "DOUBTFUL",
     "milwaukee bucks|myles turner": "OUT",
     "chicago bulls|caleb wilson": "OUT",
     "orlando magic|jamal cain": "AVAILABLE",
@@ -369,10 +1269,10 @@
     "detroit pistons|ronald holland ii": "AVAILABLE",
     "detroit pistons|duncan robinson": "OUT",
     "minnesota timberwolves|jonathan kuminga": "QUESTIONABLE",
-    "la clippers|jalen pickett": "OUT",
+    "la clippers|jalen pickett": "QUESTIONABLE",
     "charlotte hornets|grayson allen": "OUT",
     "miami heat|bam adebayo": "AVAILABLE",
-    "atlanta hawks|rafael castro": "OUT",
+    "atlanta hawks|rafael castro": "DOUBTFUL",
     "atlanta hawks|cj mccollum": "OUT",
     "dallas mavericks|walter clayton jr.": "AVAILABLE",
     "dallas mavericks|tobi lawal": "OUT",
@@ -380,15 +1280,15 @@
     "toronto raptors|rj barrett": "OUT",
     "philadelphia 76ers|tyrese maxey": "AVAILABLE",
     "detroit pistons|cade cunningham": "OUT",
-    "san antonio spurs|dylan harper": "OUT",
+    "san antonio spurs|dylan harper": "QUESTIONABLE",
     "portland trail blazers|toumani camara": "QUESTIONABLE",
     "golden state warriors|lj cryer": "AVAILABLE",
     "milwaukee bucks|kyle kuzma": "OUT",
     "toronto raptors|jaden bradley": "AVAILABLE",
     "utah jazz|jonas aidoo": "OUT",
     "denver nuggets|bryce hopkins": "OUT",
-    "new york knicks|og anunoby": "OUT",
-    "new york knicks|jordan clarkson": "OUT",
+    "new york knicks|og anunoby": "DOUBTFUL",
+    "new york knicks|jordan clarkson": "QUESTIONABLE",
     "dallas mavericks|p.j. washington": "QUESTIONABLE",
     "cleveland cavaliers|zack austin": "OUT",
     "phoenix suns|duop reath": "OUT",
@@ -398,7 +1298,7 @@
     "miami heat|keshad johnson": "AVAILABLE",
     "washington wizards|deandre ayton": "AVAILABLE",
     "oklahoma city thunder|aday mara": "OUT",
-    "new york knicks|miles mcbride": "OUT",
+    "new york knicks|miles mcbride": "QUESTIONABLE",
     "brooklyn nets|chaney johnson": "OUT",
     "san antonio spurs|jordan mclaughlin": "AVAILABLE",
     "san antonio spurs|victor wembanyama": "QUESTIONABLE",
@@ -407,64 +1307,13 @@
     "washington wizards|tre mann": "QUESTIONABLE",
     "charlotte hornets|sion james": "AVAILABLE",
     "charlotte hornets|ryan kalkbrenner": "OUT",
-    "new york knicks|jalen brunson": "AVAILABLE"
+    "new york knicks|jalen brunson": "AVAILABLE",
+    "miami heat|andrew wiggins": "PROBABLE",
+    "new york knicks|andre drummond": "QUESTIONABLE",
+    "brooklyn nets|moritz wagner": "OUT",
+    "toronto raptors|alijah martin": "QUESTIONABLE"
   },
   "events": [
-    {
-      "event_id": "09f92ee3a076dcedab:OUT",
-      "previous": "QUESTIONABLE",
-      "game_date": "2026-11-09",
-      "matchup": "LAL@ATL",
-      "team": "Atlanta Hawks",
-      "player": "RayJ Dennis",
-      "status": "OUT",
-      "reason": "G League - Two-Way",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_07_15PM.pdf"
-    },
-    {
-      "event_id": "072fccb7901788aaad:OUT",
-      "previous": "QUESTIONABLE",
-      "game_date": "2026-11-09",
-      "matchup": "LAL@ATL",
-      "team": "Atlanta Hawks",
-      "player": "Jalen Wilson",
-      "status": "OUT",
-      "reason": "G League - Two-Way",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_07_15PM.pdf"
-    },
-    {
-      "event_id": "7e38fe9f9e83d6655a:OUT",
-      "previous": "AVAILABLE",
-      "game_date": "2026-11-09",
-      "matchup": "WAS@DET",
-      "team": "Washington Wizards",
-      "player": "Bilal Coulibaly",
-      "status": "OUT",
-      "reason": "Injury/Illness - Left Hand Soreness",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_07_15PM.pdf"
-    },
-    {
-      "event_id": "87dea3f0a6a30896a2:OUT",
-      "previous": "QUESTIONABLE",
-      "game_date": "2026-11-09",
-      "matchup": "MEM@TOR",
-      "team": "Toronto Raptors",
-      "player": "Scottie Barnes",
-      "status": "OUT",
-      "reason": "Injury/Illness - Left Groin Strain",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_07_15PM.pdf"
-    },
-    {
-      "event_id": "13c73e263ad1030c82:OUT",
-      "previous": "NOT LISTED",
-      "game_date": "2026-11-09",
-      "matchup": "MEM@TOR",
-      "team": "Toronto Raptors",
-      "player": "Collin Murray-Boyles",
-      "status": "OUT",
-      "reason": "Injury/Illness - Illness",
-      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_07_15PM.pdf"
-    },
     {
       "event_id": "bc3f56a9bf679c3f49:OUT",
       "previous": "QUESTIONABLE",
@@ -2609,14 +3458,69 @@
       "status": "OUT",
       "reason": "G League - Two-Way",
       "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf"
+    },
+    {
+      "event_id": "d82e493051d5ad754b:OUT",
+      "previous": "NOT LISTED",
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Brooklyn Nets",
+      "player": "Moritz Wagner",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    {
+      "event_id": "d095b3a64df46e193a:OUT",
+      "previous": "AVAILABLE",
+      "game_date": "2026-11-27",
+      "matchup": "BKN@TOR",
+      "team": "Toronto Raptors",
+      "player": "Malachi Smith",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    {
+      "event_id": "0fbfc36739212b7725:OUT",
+      "previous": "AVAILABLE",
+      "game_date": "2026-11-27",
+      "matchup": "PHI@IND",
+      "team": "Philadelphia 76ers",
+      "player": "Jaylen Brown",
+      "status": "OUT",
+      "reason": "Management",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    {
+      "event_id": "1a8ce600f62a17b386:OUT",
+      "previous": "AVAILABLE",
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Malik Dia",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
+    },
+    {
+      "event_id": "2152816a2dc6de9c0f:OUT",
+      "previous": "AVAILABLE",
+      "game_date": "2026-11-27",
+      "matchup": "NOP@LAC",
+      "team": "New Orleans Pelicans",
+      "player": "Jaron Pierre Jr.",
+      "status": "OUT",
+      "reason": "G League - Two-Way",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf"
     }
   ],
   "pending": [],
   "metadata": {
-    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_02_45PM.pdf",
-    "report_at": "2026-11-26T14:45:00-05:00",
-    "fetched_at": "2026-11-26T19:53:01.020414+00:00",
-    "count": 4,
+    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_09_30PM.pdf",
+    "report_at": "2026-11-26T21:30:00-05:00",
+    "fetched_at": "2026-11-27T02:37:11.082573+00:00",
+    "count": 104,
     "state": "ready"
   }
 }
